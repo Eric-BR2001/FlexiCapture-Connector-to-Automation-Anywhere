@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InvoiceSettings xmlns="http://www.abbyy.com/InvoiceSettings/v1">
+	<Countries>
+		<Country Name="Universal" IsPredefined="true" IsEnabled="true">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>1BAN|IBAN|IBANNO|lBAN"</Keywords>
+					</Label>
+					<Value>
+						<Prefix></Prefix>
+						<RecognizedPrefix></RecognizedPrefix>
+						<Body>[%LETTERS%]{2}[%DIGITS%]{2}[%LETTERSANDDIGITS%]{10-30}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>V.A.T.NO|VAT|VATID|VATNO|VATNUMBER|VATREG.NO|VATREGISTRATIONID|VATREGISTRATIONNUMBER|VATREGNO</Keywords>
+					</Label>
+					<Value>
+						<Prefix></Prefix>
+						<RecognizedPrefix></RecognizedPrefix>
+						<Body>[%LETTERS%]{2}[%LETTERSANDDIGITS%]{2-12}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames></CurrencyNames>
+					<NumberFractionalPartSeparators></NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators></NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords></Keywords>
+				</TaxRateLabel>
+				<Taxes/>
+			</Amount>
+		</Country>
+		<Country Alpha2="GB" Name="Great Britain" IsPredefined="true" IsEnabled="true">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN|IBANSterling|InternationalBankAccountNumber</Keywords>
+					</Label>
+					<Value>
+						<Prefix>GB</Prefix>
+						<RecognizedPrefix>([%G%][%B%])|("CD")|("G8")|("CB")</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{18}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>VATID</Keywords>
+					</Label>
+					<Value>
+						<Prefix>GB</Prefix>
+						<RecognizedPrefix>([%G%][%B%])|("CD")|("G8")|("CB")</RecognizedPrefix>
+						<Body>([%DIGITS%]{9})|([%DIGITS%]{12})|([%G%][%D%][%01234%][%DIGITS%]{2})|([%H%][%A%][%56789%][%DIGITS%]{2})</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords>REGINENGLAND|REGISTEREDINENGLAND|REGISTEREDINENGLANDANDWALES</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{7}</RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords>Sort|SortCode</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{2}[\-][%DIGITS%]{2}[\-][%DIGITS%]{2}</RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords>Account|AccountNumber|AccountNo</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{8}</RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>£|GBP|€|Eur|Euro|Euros</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>Rate|VAT%</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>VAT</Keywords>
+						<Percentage>20.</Percentage>
+						<StartDate>2011-01-04</StartDate>
+					</Tax>
+					<Tax>
+						<Keywords>VAT</Keywords>
+						<Percentage>15.</Percentage>
+						<StartDate>2008-12-01</StartDate>
+						<EndDate>2009-12-31</EndDate>
+					</Tax>
+					<Tax>
+						<Keywords>VAT</Keywords>
+						<Percentage>17.5</Percentage>
+						<StartDate>2010-01-01</StartDate>
+						<EndDate>2011-01-03</EndDate>
+					</Tax>
+					<Tax>
+						<Keywords>VAT</Keywords>
+						<Percentage>5.</Percentage>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="DE" Name="Germany" IsPredefined="true" IsEnabled="true">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="German"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN</Keywords>
+					</Label>
+					<Value>
+						<Prefix>DE</Prefix>
+						<RecognizedPrefix>([%D%][%E%])|([%d%][%e%])|("OE")</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{18}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>USMDNR|UST-ID|UST-ID-NR|UST-IDENT-NR|UST-IDNR|UST-LDENT-NR|USTID-NR</Keywords>
+					</Label>
+					<Value>
+						<Prefix>DE</Prefix>
+						<RecognizedPrefix>([%D%][%E%])|([%d%][%e%])|("OE")</RecognizedPrefix>
+						<Body>[%DIGITS%]{9}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords>ST-NR|STEUERNR|STEUERNUMMER|STNR</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>([%DIGITS%]{10})|([%DIGITS%]{11})|([%DIGITS%]{5}[/]{0-1}[%DIGITS%]{5})|([%DIGITS%]{3}[/]{0-1}[%DIGITS%]{3}[/]{0-1}[%DIGITS%]{5})|([%DIGITS%]{2}[/]{0-1}[%DIGITS%]{3}[/]{0-1}[%DIGITS%]{5})|([%DIGITS%]{3}[/]{0-1}[%DIGITS%]{4}[/]{0-1}[%DIGITS%]{4})|([%DIGITS%]{2}[/]{0-1}[%DIGITS%]{3}[/]{0-1}[%DIGITS%]{4}[/]{0-1}[%DIGITS%])|([%DIGITS%]{2}[/]{0-1}[%DIGITS%]{3}[/]{0-1}[%DIGITS%]{3}[/]{0-1}[%DIGITS%]{2})</RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords>BLZ|BLZ/BankCode|Bankleitzahl|BIZ|BL2|ßU|6LZ|8LZ</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{8}</RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords>Konto-Nr|Konto|Kto-Nr./Account Number|Kto-Nr|KTO|Kontonummer|Klo|Bankkonto|Kto.-Nr|Kto,-Nr|EUR-Konto</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[!0123456789DÖOSlos\-]{4-12}</RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>Eur|Euro|Euros|€</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>MwSt|MwSt-Satz|Mehrwertsteuer</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>Mehrwertsteuer|MwSt|MwSt.19%|steuer|Ust|V.A.T.|VAT</Keywords>
+						<Percentage>19.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>MwSt|MwSt.7%</Keywords>
+						<Percentage>7.</Percentage>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="AT" Name="Austria" IsPredefined="true" IsEnabled="false">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="German"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN|IBANCode</Keywords>
+					</Label>
+					<Value>
+						<Prefix>AT</Prefix>
+						<RecognizedPrefix>[%A%][%T%]</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{16}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>UID-NR|UID-NUMMER|UST-ID</Keywords>
+					</Label>
+					<Value>
+						<Prefix>AT</Prefix>
+						<RecognizedPrefix>[%A%][%T%]</RecognizedPrefix>
+						<Body>[%U%][%DIGITS%]{8}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords>BLZ|BLZ/BankCode|Bankleitzahl|BIZ|BL2|ßU|6LZ|8LZ</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{5}</RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords>Konto-Nr|Konto|Kto-Nr./Account Number|Kto-Nr|KTO|Kontonummer|Klo|Bankkonto|Kto.-Nr|Kto,-Nr|EUR-Konto|PSK-Konto</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[!0123456789DÖOSlos\-/.]{4-12}</RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>Eur|Euro|Euros|€</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>MwSt</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>20%MwSt|Mehrwertsteuer|MwSt|V.A.T.|VAT</Keywords>
+						<Percentage>20.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>10%MwSt|MwSt</Keywords>
+						<Percentage>10.</Percentage>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="FR" Name="France" IsPredefined="true" IsEnabled="true">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="French"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN</Keywords>
+					</Label>
+					<Value>
+						<Prefix>FR</Prefix>
+						<RecognizedPrefix>[%F%]([%R%]|"Ft")</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{23}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>TVA|TVAINTRA|TVAINTRACOMMUNAUTAIRE</Keywords>
+					</Label>
+					<Value>
+						<Prefix>FR</Prefix>
+						<RecognizedPrefix>[%F%]([%R%]|"Ft")</RecognizedPrefix>
+						<Body>[%DIGITS%]{11}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords>RIB</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{10}[%LETTERSANDDIGITS%]{11}[%DIGITS%]{2}</RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>Eur|Euro|Euros|€</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>T.V.A|TVA|Taux|Taux|TauxT.V.A|TauxTVA|TauxdeTVA|TauxdeT.V.A</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>T.V.A19.6%|TVA19.6%</Keywords>
+						<Percentage>19.6</Percentage>
+						<EndDate>2013-12-31</EndDate>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A7%|TVA7%</Keywords>
+						<Percentage>7.</Percentage>
+						<EndDate>2013-12-31</EndDate>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A5.5%|TVA5.5%</Keywords>
+						<Percentage>5.5</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A2.1%|TVA2.1%</Keywords>
+						<Percentage>2.1</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A10%|TVA10%</Keywords>
+						<Percentage>10.</Percentage>
+						<StartDate>2014-01-01</StartDate>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A20%|TVA20%</Keywords>
+						<Percentage>20.</Percentage>
+						<StartDate>2014-01-01</StartDate>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="BE" Name="Belgium" IsPredefined="true" IsEnabled="false">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="French"/>
+				<Language RecognitionLanguage="Dutch"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN</Keywords>
+					</Label>
+					<Value>
+						<Prefix>BE</Prefix>
+						<RecognizedPrefix>[%B%][%E%]</RecognizedPrefix>
+						<Body>([%LETTERSANDDIGITS%]{12})|([%-.,%]{0-1}[%LETTERSANDDIGITS%]{4}[%-.,%]{0-1}[%LETTERSANDDIGITS%]{4}[%-.,%]{0-1}[%LETTERSANDDIGITS%]{4})</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>BTW|TVA|TVA/BTW|T.V.A.-B.T.W.</Keywords>
+					</Label>
+					<Value>
+						<Prefix>BE</Prefix>
+						<RecognizedPrefix>[%B%][%E%]</RecognizedPrefix>
+						<Body>([%0%][%DIGITS%]{10})|([%-.,%]{0-1}[%0%][%DIGITS%]{3}[%-.,%]{0-1}[%DIGITS%]{3}[%-.,%]{0-1}[%DIGITS%]{3})</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>Eur|Euro|Euros|€</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>T.V.A|TVA|TVA%/BTW%</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>T.V.A21%|TVA21%</Keywords>
+						<Percentage>21.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A12%|TVA12%</Keywords>
+						<Percentage>12.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A6%|TVA6%</Keywords>
+						<Percentage>6.</Percentage>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="CH" Name="Switzerland" IsPredefined="true" IsEnabled="false">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="French"/>
+				<Language RecognitionLanguage="German"/>
+				<Language RecognitionLanguage="Italian"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN</Keywords>
+					</Label>
+					<Value>
+						<Prefix>CH</Prefix>
+						<RecognizedPrefix>[%C%][%H%]</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{17}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<Prefix>CH</Prefix>
+						<RecognizedPrefix>[%C%][%H%]</RecognizedPrefix>
+						<Body>[%DIGITS%]{6}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords>MEHRWERTSTEUER-ID|MWST-NR</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{6}</RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords>BC|BC-NR|ClearingNr</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{4-5}</RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords>Konto-Nr|Konto|Kto-Nr./Account Number|Kto-Nr|KTO|Kontonummer|Klo|Bankkonto|Kto.-Nr|Kto,-Nr|Compte|ComptePostal|Postconto|BankaccNo</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%LETTERSANDDIGITS%\-/.]{7-14}</RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>€|CHF|Eur|Euro|Euros|Fr.|SFr.</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,'</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords>SommeTotale|SommeTotaleCHF</Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>Mwst|T.V.A|TVA</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>Mwst|TVA</Keywords>
+						<Percentage>8.</Percentage>
+						<StartDate>2011-01-01</StartDate>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A2.5%|TVA2.5%</Keywords>
+						<Percentage>2.5</Percentage>
+						<StartDate>2011-01-01</StartDate>
+					</Tax>
+					<Tax>
+						<Keywords>Mwst|TVA</Keywords>
+						<Percentage>7.6</Percentage>
+						<EndDate>2010-12-31</EndDate>
+					</Tax>
+					<Tax>
+						<Keywords>T.V.A2.4%|TVA2.4%</Keywords>
+						<Percentage>2.4</Percentage>
+						<EndDate>2010-12-31</EndDate>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="IE" Name="Ireland" IsPredefined="true" IsEnabled="false">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN</Keywords>
+					</Label>
+					<Value>
+						<Prefix>IE</Prefix>
+						<RecognizedPrefix>[%I%][%E%]</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{18}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>VATID</Keywords>
+					</Label>
+					<Value>
+						<Prefix>IE</Prefix>
+						<RecognizedPrefix>[%I%][%E%]</RecognizedPrefix>
+						<Body>[%DIGITS%]{7}[%LETTERS%]</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>£|GBP|€|Eur|Euro|Euros</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>Rate|VAT%</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>VAT</Keywords>
+						<Percentage>23.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>VAT</Keywords>
+						<Percentage>13.5</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>VAT</Keywords>
+						<Percentage>4.8</Percentage>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="IT" Name="Italy" IsPredefined="true" IsEnabled="false">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="Italian"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN</Keywords>
+					</Label>
+					<Value>
+						<Prefix>IT</Prefix>
+						<RecognizedPrefix>[%I%][%T%]</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{23}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>PartitaIVA</Keywords>
+					</Label>
+					<Value>
+						<Prefix>IT</Prefix>
+						<RecognizedPrefix>[%I%][%T%]</RecognizedPrefix>
+						<Body>[%DIGITS%]{11}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>Eur|Euro|Euros|€</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>IVA</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>21.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>10.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>4.</Percentage>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="NL" Name="Netherlands" IsPredefined="true" IsEnabled="true">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="Dutch"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN|IBAN-code|IBAN-nr</Keywords>
+					</Label>
+					<Value>
+						<Prefix>NL</Prefix>
+						<RecognizedPrefix>[%N%][%L%]</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{14}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>BTW/VAT</Keywords>
+					</Label>
+					<Value>
+						<Prefix>NL</Prefix>
+						<RecognizedPrefix>[%N%][%L%]</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{12}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords>BIC|BIG|Swift|Swiftaddress|Swift-code|Swiftnumber</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%LETTERSANDDIGITS%]{8}</RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords>acc.nr|Bankrek|bankrek.nr|bankrek.nr.is|bankrekening|bankrekeningnummer|Domestic|oprekening|rekening|REKENINGNR|Rekeningnummer|Rekeningnummeris|reknr</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[0123456789.,]{7-14}</RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>Eur|Euro|Euros|€</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>BTW|BTWBEDRAG|BTWSpecificatie</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>21%BTW|BTW21%</Keywords>
+						<Percentage>21.</Percentage>
+						<StartDate>2012-10-01</StartDate>
+					</Tax>
+					<Tax>
+						<Keywords>19%BTW|BTW19%</Keywords>
+						<Percentage>19.</Percentage>
+						<EndDate>2012-09-30</EndDate>
+					</Tax>
+					<Tax>
+						<Keywords>6%BTW|BTW6%</Keywords>
+						<Percentage>6.</Percentage>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+		<Country Alpha2="ES" Name="Spain" IsPredefined="true" IsEnabled="true">
+			<Languages>
+				<Language RecognitionLanguage="English"/>
+				<Language RecognitionLanguage="Spanish"/>
+			</Languages>
+			<CompanyAttributes>
+				<Iban>
+					<Label>
+						<Keywords>IBAN|IBANCODE</Keywords>
+					</Label>
+					<Value>
+						<Prefix>ES</Prefix>
+						<RecognizedPrefix>[%E%][%S%]</RecognizedPrefix>
+						<Body>[%DIGITS%]{20}</Body>
+					</Value>
+				</Iban>
+				<EuropeanVatId>
+					<Label>
+						<Keywords>PartitaIVA</Keywords>
+					</Label>
+					<Value>
+						<Prefix>ES</Prefix>
+						<RecognizedPrefix>[%E%][%S%]</RecognizedPrefix>
+						<Body>[%LETTERSANDDIGITS%]{9}</Body>
+					</Value>
+				</EuropeanVatId>
+				<NationalVatId>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</NationalVatId>
+				<BankCode>
+					<Label>
+						<Keywords></Keywords>
+					</Label>
+					<Value>
+						<RegularExpression></RegularExpression>
+					</Value>
+				</BankCode>
+				<BankAccount>
+					<Label>
+						<Keywords>Bankaccountno.|N°CCC|Núm.Cta.|FormadePago:N°CTA|N°CTA|Recibobancarioen|DOMICILIACIONALACTA|DOMICILIACION</Keywords>
+					</Label>
+					<Value>
+						<RegularExpression>[%DIGITS%]{4}[\-/]{0-1}[%DIGITS%]{4}[\-/]{0-1}[%DIGITS%]{2}[\-/]{0-1}[%DIGITS%]{10}</RegularExpression>
+					</Value>
+				</BankAccount>
+			</CompanyAttributes>
+			<Amount>
+				<Currency>
+					<CurrencyNames>Eur|Euro|Euros|€</CurrencyNames>
+					<NumberFractionalPartSeparators>.,</NumberFractionalPartSeparators>
+					<NumberIntegerPartSeparators>.,</NumberIntegerPartSeparators>
+				</Currency>
+				<TotalLabel>
+					<Keywords></Keywords>
+				</TotalLabel>
+				<TotalNettoLabel>
+					<Keywords></Keywords>
+				</TotalNettoLabel>
+				<TotalTaxLabel>
+					<Keywords></Keywords>
+				</TotalTaxLabel>
+				<TaxRateLabel>
+					<Keywords>IVA|I.V.A</Keywords>
+				</TaxRateLabel>
+				<Taxes>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>21.</Percentage>
+						<StartDate>2012-09-01</StartDate>
+					</Tax>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>10.</Percentage>
+						<StartDate>2012-09-01</StartDate>
+					</Tax>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>4.</Percentage>
+					</Tax>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>18.</Percentage>
+						<StartDate>2010-07-01</StartDate>
+						<EndDate>2012-08-31</EndDate>
+					</Tax>
+					<Tax>
+						<Keywords>IVA</Keywords>
+						<Percentage>8.</Percentage>
+						<StartDate>2010-07-01</StartDate>
+						<EndDate>2012-08-31</EndDate>
+					</Tax>
+				</Taxes>
+			</Amount>
+		</Country>
+	</Countries>
+	<Languages>
+		<Language RecognitionLanguage="English">
+			<Date>
+				<Language>English</Language>
+			</Date>
+			<KeywordLists>
+				<KeywordList Name="CreditNoteKeywords">
+					<Keywords>creditmemo|creditmemorandum|creditnote</Keywords>
+				</KeywordList>
+				<KeywordList Name="ReversedChargeKeywords">
+					<Keywords>ReversedCharge</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberWithDateLabels">
+					<Keywords>CN No/Date</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberHighConfidenceLabels">
+					<Keywords>billnumber|DebitNote|DebitNoteNo|DEBITNOTENUMBER|DocumentNumber|Invoice/Credit|Invoice/CreditNo|Invoicenumber|InvoiceNumber(*)|Youraccountandbillnumber</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberLowConfidenceLabels">
+					<Keywords>Bill|CreditNote|CREDITNOTENo|CREDITNOTENr|DocumentNo|INV/CRNO|InvNo|Invoice|Invoice#|INVOICE-No|InvoiceNo|InvoiceNr|INVOICEN°|Involoe|Number|SalesInvoice</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludePrefixes">
+					<Keywords>No.|Nr.|Nr.:</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludeSuffixes">
+					<Keywords>InvoiceDate</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateHighConfidenceLabels">
+					<Keywords>BILLDATE|CreditDate|Date(taxpoint)|Date/TaxPoint|Date/TaxPt|DocumentDate|Invoice/TaxDate|Invoice/Taxpointdate|InvoiceDate|Posting/TaxPoint|Posting/TaxPointD|Posting/TaxPointDate|TaxPoint&amp;Date|TaxPoint/invoiceDate</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLowConfidenceLabels">
+					<Keywords>Date|Invoicedon|TaxDate|TaxPoint</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearCity">
+					<Keywords>,</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearInvoiceNumber">
+					<Keywords>,dated|dated</Keywords>
+				</KeywordList>
+				<KeywordList Name="DeliveryDateLabels">
+					<Keywords>DeliveryDate|ShipmentDate</Keywords>
+				</KeywordList>
+				<KeywordList Name="DueDateLabels">
+					<Keywords>DateDue|Due|DueDate|PaymentDue|PaymentDueDate</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameLabels">
+					<Keywords>ContactPerson|CustomerContact|YourContactPerson</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameFalseFieldPrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="OrderNumberLabels">
+					<Keywords>CustomerOrderNo|OrderID|OrderNo|OrderNumber|PurchaseOrder|PurchaseOrderNo|Yourorder</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceIdentifiers">
+					<Keywords>Invoice</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalLabels">
+					<Keywords>amount due|amount to pay|balance due|grand total|grand total incl. vat|grand total including vat|gross total|invoice amount|invoice total|total|total £|total amount|total amount due|total credit inc. vat|total credit incl. vat|total credit including vat|total due|total eur|total euro|total gbp incl. vat|total gbp including vat|total gross|total incl. vat|total including vat|total invoice|total value|total value inc. vat|total value including vat</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalNettoLabels">
+					<Keywords>goods total|grand total excl. vat|grand total excluding vat|item(s) subtotal|merchandise|net|net total|net £|nett|sub total|sub total excl.vat|sub total excluding vat|subtotal|total ex vat|total excl. vat|total excluding vat|total gbp excl. vat|total gbp excluding vat|total net|total net amount|total of goods and services|total value excl. vat|total value excluding vat</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalTaxLabels">
+					<Keywords>TotalVAT|TotalVATAmount</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderNumberLabels">
+					<Keywords>ORDER|ORDER NO.|OUR REF|P.O. NUMBER|P/O NO.|PO/NO.</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsPositionLabels">
+					<Keywords>LINE|NO.|POS|POS.</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDescriptionLabels">
+					<Keywords>ARTICLE|ARTICLE/DESIGNATION|DESC|DESCRIPTION|DESCRIPTION OF GOODS|DESCRIPTION/PRODUCT CODE|DESIGNATION|DETAILS|MODEL NUMBER/DESCRIPTION|PRODUCT|PRODUCT DESCRIPTION|PRODUCTS:</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsArticleNumberLabels">
+					<Keywords>CATALOG NO.|CODE|ID NO.|ITEM|ITEM CODE|ITEM NUMBER|ITEM-#|OUR REF.|PART NO.|PRODUCT CODE|REFERENCE|STOCK CODE|STOCK NUMBER|UPC</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsQuantityLabels">
+					<Keywords>ORDERED|Q'TY|QTY|QTY-SHIP|QUANTITY|UNIT</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitPriceLabels">
+					<Keywords>ITEM-PRICE|NETT PRICE EACH|PRICE|PRICE EACH|PRICE EXC VAT|RETAIL PRICE|U/PRICE|UNIT COST|UNIT NET PRICE|UNIT PRICE|UNIT PRICE COST</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitOfMeasureLabels">
+					<Keywords>ME|MEASURE|PER|UM|UNIT OF MEASURE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDiscountPercentageLabels">
+					<Keywords>% DISC|DISC|DISC%|DISCOUNT</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceNettoLabels">
+					<Keywords>AMOUNT|LINE TOTAL|NET|NET AMOUNT|NETT VALUE|TOTAL|TOTAL £EA|TOTAL AMOUNT|TOTAL EXC VAT|TOTAL PRICE|TOTAL PRICE EXCLUDING VAT|VALUE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceBruttoLabels">
+					<Keywords>AMOUNT|GROSS CHARGE|LINE TOTAL|TOTAL|TOTAL £EA|TOTAL AMOUNT|TOTAL PRICE|VALUE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderDateLabels">
+					<Keywords>DATEXXX</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDeliveryDateLabels">
+					<Keywords>DELY DATE:|PERIOD</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATPercentageLabels">
+					<Keywords>RATE|V.A.T|V.A.T RATE|V.A.T RATE %|V.A.T%|V.A.T(%)|VAT|VAT RATE|VAT RATE %|VAT%|VAT(%)</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATCodeLabels">
+					<Keywords>CODE|V.A.T|V.A.T CODE|VAT|VAT CODE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsMaterialNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+			</KeywordLists>
+		</Language>
+		<Language RecognitionLanguage="German">
+			<Date>
+				<Language>German</Language>
+			</Date>
+			<KeywordLists>
+				<KeywordList Name="CreditNoteKeywords">
+					<Keywords>gutschrift|stornierung</Keywords>
+				</KeywordList>
+				<KeywordList Name="ReversedChargeKeywords">
+					<Keywords>SteuerschuldnerschaftdesLeistungsempfängers</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberWithDateLabels">
+					<Keywords>Beleg-nr|Nummer/Datum|Nummer/Rechnungsdatum|RECHNUNG/Datum|Rechnungsnr./-datum|RG-NR/DATUM</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberHighConfidenceLabels">
+					<Keywords>AUFTRAGSBESTATIGUNG/RECHNUNGNR|BeitragsrechnungNr|Beleg-Nummer|Belegnummer|Rechn.-Nummer|Rechn.Nummer|Rechnung(Invoice)Nr|RECHNUNG/INVOICE|Rechnung/Lieferschein|Rechnungsnummer|SAMMEL-RECHNUNG|TeilnahmebestätigungundRechnungNr</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberLowConfidenceLabels">
+					<Keywords>Beleg-nr|Belegnr|Faktura|FakturaNr|Gutschrift|Gutschriftsnr|Nr./No|nummer|Re-Nummer|Re.Nr|Rech-Nr|Rech.-Nr|Rechn.-Nr|Rechnung|RECHNUNG-NR|RechnungNr|Rechnungs-Nr|RechnungsNr|Rg-Nr|Rg.-Nr</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludePrefixes">
+					<Keywords>Nr.|Nr.:</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludeSuffixes">
+					<Keywords>Kopie</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateHighConfidenceLabels">
+					<Keywords>Beleg-Datum|Belegdatum|Faktura-Datum|Liefer-/Rechnungsdatum|Lieferdatum/Rechnungsdatum|Rechn.-Datum|Rechn.Datum|Rechnungs/Lieferdatum|Rechnungsdatum|Referat/Sachbearbeiter/Datum</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLowConfidenceLabels">
+					<Keywords>Datum|DATUM/DATE|Rechnungvom|Rg.-Datum|vom/date</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearCity">
+					<Keywords>,|,den</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearInvoiceNumber">
+					<Keywords>vom</Keywords>
+				</KeywordList>
+				<KeywordList Name="DeliveryDateLabels">
+					<Keywords>Leistungsdatum|Liefer-/Rechnungsdatum|Lieferdatum|Lieferdatum/Rechnungsdatum|LieferdatumabWerk|Liefernr|Liefertermin|Lieferung|Lieferungsdatum|Lieferungvom|Rechnungs/Lieferdatum|Wirliefertenam</Keywords>
+				</KeywordList>
+				<KeywordList Name="DueDateLabels">
+					<Keywords>Fälligkeit|Fälligkeitsdatum|Zahlbarbis</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameLabels">
+					<Keywords>Auftraggeber|Besteller|IhrAnsprechpartner|IhreReferenz</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameFalseFieldPrefixes">
+					<Keywords>Aussteller|für|Your</Keywords>
+				</KeywordList>
+				<KeywordList Name="OrderNumberLabels">
+					<Keywords>Bestellnr|Bestellnummer|MSAuftrags-Nr|Vertrags-Nr</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceIdentifiers">
+					<Keywords>Rechnung</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalLabels">
+					<Keywords>Betrag inkl. mwst|Brutto-Rechnungssumme|Bruttobetrag|BruttoEur|Endbetrag|Endpreis|Endsumme|Gesamt|Gesamtbetrag|GesamtbetragEur|Gesamtbrutto|Gesamtrechnungsbetrag|Gesamtsumme|GesamtsummeEUR|Gesamttotal|gesamtwert|Gutschriftsbetrag|Insgesamt|Rechnungsbetrag|Rechnungssumme|RechnungswertXX|Summe brutto|Summe EUR|Summe total|Zahlungsbetrag</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalNettoLabels">
+					<Keywords>betrag exkl. mwst|gesamt netto|gesamtbetrag netto|gesamtnetto|gesamtsumme positionen|net amount|net value|netto|netto eur|netto euro|netto ges.|netto warenwert|netto-betrag|nettobetrag|nettogesamtbetrag|nettosumme|nettowarenwert|nettowert|positionssumme|summe netto|summe positionen|warenwert|warenwert netto|zwischensumme|zwischensumme eur|zwischensumme netto</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalTaxLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderNumberLabels">
+					<Keywords>Auftrags-Nr.|Bestell-Nr.|Nummer|Referenz-Nr.|ReferenzNr.</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsPositionLabels">
+					<Keywords>Nr.|Nummer|Pos|Pos.|Pos.Nr.|Position|Ref.Nr.</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDescriptionLabels">
+					<Keywords>Artikel|Artikelbezeichnung|Artikelname|Beschreibung|Bezeichnung|Leistung|Leistungsbeschreibung|Position|Produkt|Produktbeschreibung|Produktbezeichnung|Text</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsArticleNumberLabels">
+					<Keywords>Art.-Nr.|Artikel|Artikel-Nr.|Artikelnr.|ArtNr.|Nummer</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsQuantityLabels">
+					<Keywords>Anz|Anz.|Anzahl|Behälter/Menge|Liefermenge|Menge|Menge/Volumen/|STCK|Stück|Stückzahl|Stunden/Menge</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitPriceLabels">
+					<Keywords>EinzelNetto|Einzelpr.|Einzelpreis|EP(EUR)|E-Preis|Grundpreis|Händler-EK|Nettoeinzel-|Nettoeinzelpreis|Preis|Preis/EinhEUR|Preis/VE|Preispro|Stückpreis|VK-Preis|Wert</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitOfMeasureLabels">
+					<Keywords>Einh.|Einheit|ME</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDiscountPercentageLabels">
+					<Keywords>Rab|Rabatt|Rabatt%</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceNettoLabels">
+					<Keywords>Betrag|BetragEURO|Ges.Preis|Gesamt|Gesamtbetrag|GesamtNettoEUR|Gesamtpreis|GP(EUR)|G-Preis|Netto|Nettobetrag|Nettowert|PositionswertEUR|Preis|Summe|TOTALEUR|TotalinEUR</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceBruttoLabels">
+					<Keywords>BruttoEUR</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderDateLabels">
+					<Keywords>Datum</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDeliveryDateLabels">
+					<Keywords>Datum|Lieferdatum</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATPercentageLabels">
+					<Keywords>MwSt|MwSt%|Mwst-Satz|MwSt.|MwSt.%|MwstSatz|Ust|Ust%|Ust.|Ust.%</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATCodeLabels">
+					<Keywords>MwSt|MwSt.|MwSt.Code|MwStCode|Ust|Ust.|Ust.Code|UstCode</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsMaterialNumberLabels">
+					<Keywords>Material|Material-Nr.</Keywords>
+				</KeywordList>
+			</KeywordLists>
+		</Language>
+		<Language RecognitionLanguage="French">
+			<Date>
+				<Language>French</Language>
+			</Date>
+			<KeywordLists>
+				<KeywordList Name="CreditNoteKeywords">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="ReversedChargeKeywords">
+					<Keywords>Autoliquidation</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberWithDateLabels">
+					<Keywords>No.dudocument/Date|Numéro/Date|N°defacture/date</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberHighConfidenceLabels">
+					<Keywords>FACTURE/FACTUUR|FACTURE/FACTUURN|FACTURE/FACTUURNR|FACTURE-FAKTUUR|FACTURE-FAKTUURN|FACTURE-FAKTUURNR|FACTURENUMERO|N“FACT/FAKTNr|NOTEDECREDIT|Numérodefacture</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberLowConfidenceLabels">
+					<Keywords>DocNr|FACTURE|FACTURECAISSE|FACTUREN|Factureno|Facturenr|Facturen°|N/Ref.|No.Doc|No.facture|NUMERO|N°DEFACTURE|N°DOCUMENT|N°facture|N°fed|N°PIECE|ReferenceFacture</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludePrefixes">
+					<Keywords>N*|N°|N°:|NO|No:</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludeSuffixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateHighConfidenceLabels">
+					<Keywords>Datedefacturation|Datedelafacture|DateFacture</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLowConfidenceLabels">
+					<Keywords>Date|facturedu</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearCity">
+					<Keywords>,|,Ie|,le|le</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearInvoiceNumber">
+					<Keywords>du</Keywords>
+				</KeywordList>
+				<KeywordList Name="DeliveryDateLabels">
+					<Keywords>Datedelivrasion|Dateliv.|délaidelivraison|Livraisondu</Keywords>
+				</KeywordList>
+				<KeywordList Name="DueDateLabels">
+					<Keywords>Dated’échéance|Exigiblele|échéance</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameLabels">
+					<Keywords>àl’attentionde</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameFalseFieldPrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="OrderNumberLabels">
+					<Keywords>CommandeN*|CommandeN°|N°Ordre|VotreCommande|YourOrder/VotreCommande</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceIdentifiers">
+					<Keywords>FACTURE</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalLabels">
+					<Keywords>MONTANT A REGLER T.T.C.|MONTANT T.T.C.|MONTANT T.T.C. DE LA FACTURE|MONTANT TOTAL|MONTANT TOTAL TTC|MONTANT TTC|MONTANT TTC A PAYER|MONTANT TTC DE LA FACTURE|NET A PAYER|NET A PAYER TTC|SOMME DUE|T.T.C.|TOTAL A PAYER|TOTAL AVEC TVA|TOTAL CHF|TOTAL MARCHAND.|TOTAL T.T.C.|TOTAL TTC|TTC|VALEUR TOTALE</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalNettoLabels">
+					<Keywords>HORS TAXES|LOYER HTVA|MONTANT DEMANDE HT|MONTANT HT|MONTANT NET|MONTANT TOTAL H.T.|MONTANT TOTAL HORS TAXES|MONTANT TOTAL HT|MONTANT TOTAL NET HT|MT H.T.|NET A PAYER|NET H.T.X|NET HTX|S/TOTAL HT|SOUS-TOTAL|SOUSTOTAL|TOTAL H.T.|TOTAL HORS TVA|TOTAL HT|TOTAL HTVA|TOTAL MARCHAND.|TOTAL POSITIONS|TOTAL SANS TVA|TOTAL € HT|VALEUR HORS TAXE|VALEUR NETTE</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalTaxLabels">
+					<Keywords>MONTANT T.V.A.|MONTANT TVA|T.V.A.|TOTAL TVA|TVA|TVA DE BASE|TVA DE CHF|TVA%|TVA-MONTANT|TVA/BTW</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsPositionLabels">
+					<Keywords>POS|POS.|POSTE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDescriptionLabels">
+					<Keywords>ACTE OU PRODUIT|ARTICLES|DESCRIPTIF|DESCRIPTION|DESIGNATION|DESIGNATION ARTICLE|DESIGNATION DE L'ARTICLE|DESIGNATION DES PRESTATIONS FOURNES|DESIGNATION PRODUIT|LIBELLE|LIBELLE PRESTATION|PRODUIT|REABONNEMENT</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsArticleNumberLabels">
+					<Keywords>ARTICLE|ARTICLE N*|ARTICLE N°|ARTICLE NO|CODE|CODE ARTICLE|LDA|LIGNE CODE ART|N"|N*|N°|NPRODUIT|Numéro|Numéro d'article|REF|REF.|REFERENCE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsQuantityLabels">
+					<Keywords>BASE DE CALCUL|QTE|QTE FACT|QTE LIVREE|QTE:|QUANTITE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitPriceLabels">
+					<Keywords>MONTANT UNITAIRE H.T.|MONTANT UNITAIRE HT|P.U.|P.U. NET|P.U./TAUX|P.U.H.T.|P.U/FORFAIT|PRIX H.T.|PRIX HT|PRIX NET|PRIX NET UNITAIRE|PRIX UNIT H.T.|PRIX UNIT HT|PRIX UNIT NET H.T.|PRIX UNIT NET HT|PRIX UNITAIRE|PRIX UNITAIRE HT|PRIX UNITAIRE NET|PU|PU HT|PX UNIT H.T.|PX UNIT HT|UNITAIRE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitOfMeasureLabels">
+					<Keywords>UN|UNITE|UV</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDiscountPercentageLabels">
+					<Keywords>REM%|REMISE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceNettoLabels">
+					<Keywords>DECOMPTE H.T.|DECOMPTE HT|H.T.|H.T. €URO|H.T. TOTAL|HT|HT TOTAL|MONTANT|MONTANT EN EUR|MONTANT H.T.|MONTANT HT|MONTANT NET|MONTANT NET H.T.|MONTANT NET HT|NET H.T.|NET HT|P.T.H.T.|Prix|PRIX TOTAL|PTHT|TOTAL H.T.|TOTAL H.T. EN €|TOTAL HT|TOTAL HT EN €</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceBruttoLabels">
+					<Keywords>MONTANT|MONTANT € T.T.C.|MONTANT € TTC|MONTANT BRUT|MONTANT EN EUR|MONTANT T.T.C.|MONTANT TTC|T.T.C.|Total|TOTAL T.T.C.|TOTAL TTC|TTC</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderDateLabels">
+					<Keywords>DATE</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDeliveryDateLabels">
+					<Keywords>DATE|PERIODES</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATPercentageLabels">
+					<Keywords>T.V.A.|T.V.A.%|TAUX|TAUX DE T.V.A.|TAUX DE TVA|TAUX TVA|Taxes|Taxes %|TUAX T.V.A.|TVA|TVA%|TX T.V.A.|TX TVA|TXM</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATCodeLabels">
+					<Keywords>CODE|CODE T.V.A.|CODE TVA|CT|T.V.A.|TAUX|TAUX DE TVA|TVA</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsMaterialNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+			</KeywordLists>
+		</Language>
+		<Language RecognitionLanguage="Dutch">
+			<Date>
+				<Language>Dutch</Language>
+			</Date>
+			<KeywordLists>
+				<KeywordList Name="CreditNoteKeywords">
+					<Keywords>creditnota</Keywords>
+				</KeywordList>
+				<KeywordList Name="ReversedChargeKeywords">
+					<Keywords>Btwverlegd</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberWithDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberHighConfidenceLabels">
+					<Keywords>Debetnota|Factuurnr./N°Facture|Factuurnummer|Fakt.nummer|FAKTUUR-FACTURE|FAKTUUR-FACTUREN|FAKTUUR-FACTURENR|FAKTUUR/FACTURE|FAKTUUR/FACTUREN|FAKTUUR/FACTURENR</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberLowConfidenceLabels">
+					<Keywords>Fact.|Fact.nr|FACTUUR|FACTUURNR|Factuurnummer|Notanr|Nummer|N°Facture-FactuurNr|rekening-nr</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludePrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludeSuffixes">
+					<Keywords>Blad|copy</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateHighConfidenceLabels">
+					<Keywords>Fact.dat|Factuurdatum|Fakt.-Datum|Notadatum</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLowConfidenceLabels">
+					<Keywords>Date/Datum|Datum</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearCity">
+					<Keywords>,</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearInvoiceNumber">
+					<Keywords>Datum</Keywords>
+				</KeywordList>
+				<KeywordList Name="DeliveryDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="DueDateLabels">
+					<Keywords>Dated’échéance/Vervaldatum|Vervaldag|Vervaldatum</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameFalseFieldPrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="OrderNumberLabels">
+					<Keywords>Ordernummer</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceIdentifiers">
+					<Keywords>FACTUUR</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalLabels">
+					<Keywords>A PAYER/TE BETALEN|BEDRAG|INCL./TVAC|TE BETALEN|TOTAAL|TOTAAL FACTUUR|TOTAAL FACTUUR/TOTAL FACTURE|TOTAAL GOEDEREN|TOTAAL INCL. BTW|TOTAAL INCLUSIEF BTW|TOTAAL TE BETALEN|TOTAAL/TOTAL|TOTAL FACTURE/TOTAAL FACTUUR|TOTAL/TOTAAL|TVAC/INCL.</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalNettoLabels">
+					<Keywords>BEDRAG|BELASTBAAR|BTW BASIS|HTVA/EXCL.|HUUR EXCL. BTW|NETTO|NETTO BEDRAG|NETTO TE BETALEN|SOUS-TOTAL/SUBTOTAAL|SUBTOTAAL|SUBTOTAAL/SOUS-TOTAL|TOTAAL|TOTAAL BELASTBAAR|TOTAAL EXCL. BTW|TOTAAL GOEDEREN|TOTAAL NETTO|TOTAAL/TOTAL</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalTaxLabels">
+					<Keywords>B.T.W.|BTW|BTW %|BTW%|BTW/TVA|TOTAAL BTW|TOTAAL TAXEN|TVA/BTW</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsPositionLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDescriptionLabels">
+					<Keywords>Omschrijving</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsArticleNumberLabels">
+					<Keywords>Nummer</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsQuantityLabels">
+					<Keywords>Hoeveelheid</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitPriceLabels">
+					<Keywords>Prijs</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitOfMeasureLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDiscountPercentageLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceNettoLabels">
+					<Keywords>Totaal</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceBruttoLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDeliveryDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATPercentageLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATCodeLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsMaterialNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+			</KeywordLists>
+		</Language>
+		<Language RecognitionLanguage="Italian">
+			<Date>
+				<Language>Italian</Language>
+			</Date>
+			<KeywordLists>
+				<KeywordList Name="CreditNoteKeywords">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="ReversedChargeKeywords">
+					<Keywords>inversionecontabile</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberWithDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberHighConfidenceLabels">
+					<Keywords>Numerofattura</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberLowConfidenceLabels">
+					<Keywords>FatturaNr|N.Fattura|Numero|NumeroDoc</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludePrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludeSuffixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateHighConfidenceLabels">
+					<Keywords>DataDocumento|DataFattura</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLowConfidenceLabels">
+					<Keywords>Data</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearCity">
+					<Keywords>,</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearInvoiceNumber">
+					<Keywords>del</Keywords>
+				</KeywordList>
+				<KeywordList Name="DeliveryDateLabels">
+					<Keywords>DATAD.D.T|DATADDT</Keywords>
+				</KeywordList>
+				<KeywordList Name="DueDateLabels">
+					<Keywords>Scadenza</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameFalseFieldPrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="OrderNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceIdentifiers">
+					<Keywords>Fattura</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalLabels">
+					<Keywords>Totale|TotaleFattura</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalNettoLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalTaxLabels">
+					<Keywords>totaleimpostaiva</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsPositionLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDescriptionLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsArticleNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsQuantityLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitPriceLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitOfMeasureLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDiscountPercentageLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceNettoLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceBruttoLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDeliveryDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATPercentageLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATCodeLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsMaterialNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+			</KeywordLists>
+		</Language>
+		<Language RecognitionLanguage="Spanish">
+			<Date>
+				<Language>Spanish</Language>
+			</Date>
+			<KeywordLists>
+				<KeywordList Name="CreditNoteKeywords">
+					<Keywords>Notadecrédito</Keywords>
+				</KeywordList>
+				<KeywordList Name="ReversedChargeKeywords">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberWithDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberHighConfidenceLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberLowConfidenceLabels">
+					<Keywords>Factura|FacturaabonoN°|FacturacontaN°|FacturadevoluciónN°|Facturan0|FacturaN°|N°DEFACTURA|N°Factura</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludePrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceNumberExcludeSuffixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateHighConfidenceLabels">
+					<Keywords>FECHAABONO|FechaFactura</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLowConfidenceLabels">
+					<Keywords>Data|Fecha</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearCity">
+					<Keywords>,</Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceDateLabelsNearInvoiceNumber">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="DeliveryDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="DueDateLabels">
+					<Keywords>Fechadevencimiento|Venc|Vencimiento</Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="PurchaserNameFalseFieldPrefixes">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="OrderNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="InvoiceIdentifiers">
+					<Keywords>Factura</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalLabels">
+					<Keywords>IMPORTEU|TotalFactura</Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalNettoLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="AmountTotalTaxLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsPositionLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDescriptionLabels">
+					<Keywords>Nombre</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsArticleNumberLabels">
+					<Keywords># Codigo</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsQuantityLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitPriceLabels">
+					<Keywords>Precio</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsUnitOfMeasureLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDiscountPercentageLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceNettoLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsTotalPriceBruttoLabels">
+					<Keywords>Total</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsOrderDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsDeliveryDateLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATPercentageLabels">
+					<Keywords>Sales Tax %</Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsVATCodeLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+				<KeywordList Name="LineItemsMaterialNumberLabels">
+					<Keywords></Keywords>
+				</KeywordList>
+			</KeywordLists>
+		</Language>
+	</Languages>
+	<PrimaryLanguages>
+		<Language RecognitionLanguage="English" IsEnabled="true"/>
+		<Language RecognitionLanguage="German" IsEnabled="true"/>
+		<Language RecognitionLanguage="French" IsEnabled="true"/>
+		<Language RecognitionLanguage="Dutch" IsEnabled="true"/>
+		<Language RecognitionLanguage="Spanish" IsEnabled="true"/>
+	</PrimaryLanguages>
+	<DocumentStatus>
+		<StatusValues>
+			<StatusValue Name="Valid">
+				<IsCustomReasonAllowed>true</IsCustomReasonAllowed>
+			</StatusValue>
+			<StatusValue Name="Exception">
+				<IsCustomReasonAllowed>true</IsCustomReasonAllowed>
+			</StatusValue>
+			<StatusValue Name="Rejected">
+				<IsCustomReasonAllowed>true</IsCustomReasonAllowed>
+			</StatusValue>
+		</StatusValues>
+		<StatusReasons>
+			<StatusReason>
+				<StatusValue Name="Valid"/>
+				<Code>V01</Code>
+				<Description>Non VAT invoice</Description>
+			</StatusReason>
+			<StatusReason>
+				<StatusValue Name="Valid"/>
+				<Code>V02</Code>
+				<Description>Small amounts</Description>
+			</StatusReason>
+			<StatusReason>
+				<StatusValue Name="Exception"/>
+				<Code>E01</Code>
+				<Description>Rounding error</Description>
+			</StatusReason>
+			<StatusReason>
+				<StatusValue Name="Rejected"/>
+				<Code>R01</Code>
+				<Description>Vendor is in the black list</Description>
+			</StatusReason>
+		</StatusReasons>
+	</DocumentStatus>
+	<AdditionalFeatures>
+		<Feature Id="DueDate" IsEnabled="true"/>
+		<Feature Id="DeliveryDate" IsEnabled="false"/>
+		<Feature Id="PurchaserName" IsEnabled="true"/>
+		<Feature Id="POMatching" IsEnabled="false"/>
+		<Feature Id="LineItemsMatching" IsEnabled="false"/>
+		<Feature Id="OperatorTraining" IsEnabled="true"/>
+		<Feature Id="OperatorsCanCreateAndModifyRecords" IsEnabled="false"/>
+	</AdditionalFeatures>
+	<OrderNumber>
+		<Value>
+			<RegularExpression></RegularExpression>
+		</Value>
+	</OrderNumber>
+</InvoiceSettings>
